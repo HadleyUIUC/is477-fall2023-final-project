@@ -12,9 +12,9 @@ SHA256_BANK = "e0bf5f5de5b846e2f18e9d90606637267d46dfa260e0f17bb12e605db5efbeb4"
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), "../data/")
 DATA_FILE_PATH = os.path.abspath(os.path.join(DATA_PATH, "bank" + '.' + "zip"))
-CSV_FILE_PATH = os.path.abspath(os.path.join(DATA_PATH, "csv/"))
+CSV_FILE_PATH = os.path.abspath(os.path.join(DATA_PATH, "unzip/"))
+CSV_EXP_FILE_PATH = os.path.abspath(os.path.join(DATA_PATH, "csv/"))
 
-print(DATA_FILE_PATH, type(DATA_FILE_PATH))
 
 if not os.path.exists(DATA_PATH):
     os.makedirs(DATA_PATH)
@@ -41,7 +41,6 @@ with ZipFile(DATA_FILE_PATH, 'r') as zObject:
     zObject.extractall(path=CSV_FILE_PATH) 
 
 dir_list = os.listdir(CSV_FILE_PATH)
-print(dir_list)
 for file in dir_list:
     with ZipFile(os.path.join(CSV_FILE_PATH, file), 'r') as zObject: 
-        zObject.extractall(path=CSV_FILE_PATH) 
+        zObject.extractall(path=CSV_EXP_FILE_PATH) 
