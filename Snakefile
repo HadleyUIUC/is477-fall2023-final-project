@@ -5,19 +5,19 @@
 
 rule prepare:
     output:
-        "data/csv/bank-additional/bank-additional-full.csv",
+        "data/csv/bank-additional/bank-additional-full.csv"
     shell:
         "python3 scripts/prepare_data.py"
 rule profile:
     input:
-        "data/csv/bank-additional/bank-additional-full.csv",
+        "data/csv/bank-additional/bank-additional-full.csv"
     output:
         "profiling/report.html"
     shell:
         "python3 scripts/profile.py"
 rule analyze:
     input:
-        "data/csv/bank-additional/bank-additional-full.csv",
+        "data/csv/bank-additional/bank-additional-full.csv"
     output:
         "results/summary.txt",
         "results/age_job.txt"
