@@ -1,5 +1,7 @@
 # IS477 FA23 Final
 
+[![DOI](https://zenodo.org/badge/727897976.svg)](https://zenodo.org/doi/10.5281/zenodo.10313569)
+
 ## Overview
 
 This repository is an analysis on an University of California Irvine ML dataset called "Bank Marketing." 
