@@ -8,14 +8,15 @@
         }
     ],
 
-    "license": "MIT License",
-
+    "license": "MIT",
+    "access_right": "open",
     "related_identifiers": [
         {
             "scheme": "doi",
             "identifier": "https://doi.org/10.24432/C5K306",
             "relation": "cites",
-            "resource_type": "Dataset"
+            "resource_type": "dataset"
         }
-    ]
+    ],
+    "upload_type" : "software"
 }
