@@ -1,0 +1,21 @@
+{
+    "title": "IS477 FA23 Final",
+    "description": "IS477 FA23 Final Project with Portuguese bank marketing data",
+    "creators": [
+        {
+            "orcid": "0009-0009-4297-0252",
+            "name": "So, Hadley"
+        }
+    ],
+
+    "license": "MIT License",
+
+    "related_identifiers": [
+        {
+            "scheme": "doi",
+            "identifier": "https://doi.org/10.24432/C5K306",
+            "relation": "cites",
+            "resource_type": "Dataset"
+        }
+    ]
+}

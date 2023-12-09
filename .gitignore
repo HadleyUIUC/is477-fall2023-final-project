@@ -1,7 +1,5 @@
 /venv
 
 /data
-/profiling
-/results
 
 .snakemake

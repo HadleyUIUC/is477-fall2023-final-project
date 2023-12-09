@@ -19,6 +19,13 @@ Using the visual graph titled `output.png` we can compare how many respondents w
 
 ## Reproducing
 
+1. Clone this repository: https://github.com/HadleyUIUC/is477-fall2023-final-project
+2. Pull the docker image: `docker pull uiuchadley/is477-fall2023-final-project:v1`  
+3. Run the docker image: `docker run --rm -v ${PWD}:/is477 is477-fall2023-final-project:v1 snakemake --cores 1 prepare`
+3. Run the docker image: `docker run --rm -v ${PWD}:/is477 is477-fall2023-final-project:v1 snakemake --cores 1 profile`
+3. Run the docker image: `docker run --rm -v ${PWD}:/is477 is477-fall2023-final-project:v1 snakemake --cores 1 analyze`
+
+
 ## License
 
 The UCI Bank Marketing dataset is under a [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode) license.
