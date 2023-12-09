@@ -21,9 +21,12 @@ df_group.rename(columns={'marital': 'count'}, inplace=True)
 with open("results/age_job.txt", "w") as f:
     f.write(str(df_group.to_string()))
 
-df_group_job = df[["age", "job", 'marital']].groupby(by=['age']).count()
+df['count'] = 1
+df['married'] = 0
+df.loc[df['marital'] == 'married', 'married'] = 1
+df_group_age = df[["age", "married", "count"]].groupby(by=['age'], group_keys=['married']).sum()
 
-ax = df_group_job.plot.bar(rot=0, figsize=(20,10))
+ax = df_group_age.plot.bar(rot=0, figsize=(20,10))
 
 fig = ax.get_figure()
 fig.savefig("results/output.png")
