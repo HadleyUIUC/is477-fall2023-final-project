@@ -20,6 +20,7 @@ rule analyze:
         "data/csv/bank-additional/bank-additional-full.csv"
     output:
         "results/summary.txt",
-        "results/age_job.txt"
+        "results/age_job.txt",
+        "results/output.png"
     shell:
         "python3 scripts/analysis.py"

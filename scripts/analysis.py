@@ -20,3 +20,10 @@ df_group = df[["age", "job", "marital"]].groupby(by=['age', 'job']).count()
 df_group.rename(columns={'marital': 'count'}, inplace=True)
 with open("results/age_job.txt", "w") as f:
     f.write(str(df_group.to_string()))
+
+df_group_job = df[["age", "job", 'marital']].groupby(by=['age']).count()
+
+ax = df_group_job.plot.bar(rot=0, figsize=(20,10))
+
+fig = ax.get_figure()
+fig.savefig("results/output.png")
